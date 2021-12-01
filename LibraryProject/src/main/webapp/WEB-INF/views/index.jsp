@@ -20,7 +20,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./resources/css/styles.css" rel="stylesheet" />
 	<meta charset="UTF-8">
-	<title>MJSY Lib</title>
+	<title>Din Lib</title>
 </head>
 <body>
         <!-- Portfolio Grid-->

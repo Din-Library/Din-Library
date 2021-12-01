@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link href="./resources/css/styles.css" rel="stylesheet" />
-<title>MJSY Lib</title>
+<title>Din Lib</title>
 </head>
 <!-- Footer-->
         <footer class="footer py-4">
