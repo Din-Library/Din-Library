@@ -1,0 +1,9 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.login.LoginService">
+
+	<select id="login_act" resultType="com.library.login.LoginDTO">
+		SELECT * FROM MEMBER WHERE MEM_ID=#{param1} AND MEM_PW=#{param2}
+	</select>
+</mapper>

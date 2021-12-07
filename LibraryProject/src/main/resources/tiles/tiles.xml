@@ -14,4 +14,32 @@
 		<put-attribute name="body" value="/WEB-INF/views/index.jsp"/>
 	</definition>
 	
+	<!-- login -->
+	<definition name="login" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp"/>
+	</definition>
+	
+	<!-- 회원가입 -->
+	<definition name="join" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/join.jsp"/>
+   	</definition>
+   	
+	<!-- 이용약관 / 개인정보처리방침 -->
+	<definition name="TOS" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/TOS.jsp"/>
+    </definition>
+
+   	<definition name="private" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/private.jsp"/>
+   	</definition>
+   	
+   	<!-- 찾아오시는 길 -->
+   	<definition name="map" extends="baseLayout">
+      <put-attribute name="body" value="/WEB-INF/views/map.jsp"/>
+   </definition>
+   
+   	<!-- 도서 검색 -->
+   	<definition name="search" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/search.jsp"/>
+   	</definition>
 </tiles-definitions>

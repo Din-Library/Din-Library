@@ -14,7 +14,7 @@
                     <div class="col-lg-4 text-lg-start">Copyrightⓒ2021 by OOOO</div>
                     <div class="col-lg-4 text-lg-start">수원시 팔달구 OO대로 123 OO빌딩 707호 031)254-7777</div>
                     <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">이용약관 | 개인정보처리방침</a>
+                        <a class="link-dark text-decoration-none me-3" href="TOS">이용약관</a> |&emsp; <a class="link-dark text-decoration-none me-3" href="private">개인정보처리방침</a>
                     </div>
                 </div>
             </div>

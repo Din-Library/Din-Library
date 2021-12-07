@@ -5,16 +5,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MJSY Lib</title>
+<title>Din Lib</title>
 <style type="text/css">
 	#container{
 		width: 100%;  
 	}
+	
 	#content{
-		width: 100%;
 		vertical-align: center;
-		text-align: center;
 	}
+	
 	#section{
 		vertical-align: center;
 	}
