@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.mypage.MypageService">
+
+<!-- 	<select id="mypage_act" resultType="com.library.mypage.MypageDTO">
+		 SELECT MEM_ID, MEM_PW, MEM_NAME, MEM_BIRTH, MEM_TEL, MEM_EMAIL, MEM_ADDR, MEM_BEBOOK, MEM_REBOOK FROM MEMBER WHERE MEM_NAME=#{param1}
+	</select> -->
+	
+	<select id="mypage_act" resultType="com.library.mypage.MypageDTO">
+		 SELECT MEM_NO, MEM_ID, MEM_PW, MEM_NAME, MEM_BIRTH, MEM_TEL, MEM_EMAIL, MEM_ADDR, MEM_BEBOOK, MEM_REBOOK FROM MEMBER WHERE MEM_NO=#{param1}
+	</select> 
+	
+	<update id="mypage_modi">
+		UPDATE MEMBER SET MEM_PW=#{param2}, MEM_NAME=#{param3}, MEM_BIRTH=#{param4}, MEM_TEL=#{param5}, MEM_EMAIL=#{param6}, MEM_ADDR=#{param7} WHERE MEM_ID=#{param1}
+	</update>
+	
+	<select id="mypage_dellist" resultType="com.library.mypage.MypageDTO">
+		SELECT * FROM MEMBER WHERE MEM_ID=#{param1}
+	</select>
+	
+	<select id="mem_delete" resultType="com.library.mypage.MypageDTO">
+		SELECT * FROM MEMBER WHERE MEM_ID=#{param1} AND MEM_PW=#{param2} 
+	</select>
+	
+	<delete id="mypage_del">
+		DELETE FROM MEMBER WHERE MEM_ID=#{param1}
+	</delete>
+	
+</mapper>
