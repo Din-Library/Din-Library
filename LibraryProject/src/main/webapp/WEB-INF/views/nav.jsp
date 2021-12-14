@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +20,11 @@
                         <li class="nav-item"><a class="nav-link" href="#services">도서관 소개</a></li>
                         <li class="nav-item"><a class="nav-link" href="search">도서 검색</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">대출/반납</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">마이페이지</a></li>
+                    <c:choose>
+                        <c:when test="${isLogOn == true && member != null }">
+                        <li class="nav-item"><a class="nav-link" href="mypage?mem_no=${member.mem_no }">마이페이지</a></li>
+                        </c:when>
+                    </c:choose>
                     </ul>
                 </div>
             </div>
