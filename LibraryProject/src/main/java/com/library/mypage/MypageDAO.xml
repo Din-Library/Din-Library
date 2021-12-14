@@ -19,11 +19,7 @@
 	<select id="mypage_dellist" resultType="com.library.mypage.MypageDTO">
 		SELECT * FROM MEMBER WHERE MEM_ID=#{param1}
 	</select>
-	
-	<select id="mem_delete" resultType="com.library.mypage.MypageDTO">
-		SELECT * FROM MEMBER WHERE MEM_ID=#{param1} AND MEM_PW=#{param2} 
-	</select>
-	
+
 	<delete id="mypage_del">
 		DELETE FROM MEMBER WHERE MEM_ID=#{param1}
 	</delete>

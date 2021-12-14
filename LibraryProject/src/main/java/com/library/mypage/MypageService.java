@@ -10,9 +10,7 @@ public interface MypageService {
 			String mem_email, String mem_addr);
 
 	public ArrayList<MypageDTO> mypage_dellist(String mem_id);
-	
-	public MypageDTO mem_delete(String mem_id, String mem_pw, String mem_rebook);
-	
+
 	public void mypage_del(String mem_id);
 	
 
