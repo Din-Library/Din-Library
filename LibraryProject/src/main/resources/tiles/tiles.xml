@@ -55,4 +55,13 @@
 	<definition name="Notice" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/views/notice.jsp"/>
 	</definition>
+	
+	<!-- 마이페이지 -->
+      <definition name="mypage" extends="baseLayout">
+         <put-attribute name="body" value="/WEB-INF/views/mypage.jsp"/>
+      </definition>
+      <!-- 회원삭제 -->
+      <definition name="my_delete" extends="baseLayout">
+         <put-attribute name="body" value="/WEB-INF/views/my_delete.jsp"/>
+      </definition>
 </tiles-definitions>
