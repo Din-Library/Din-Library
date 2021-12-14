@@ -36,20 +36,23 @@
    	<!-- 찾아오시는 길 -->
    	<definition name="map" extends="baseLayout">
       <put-attribute name="body" value="/WEB-INF/views/map.jsp"/>
-   </definition>
+   	</definition>
    
    	<!-- 도서 검색 -->
    	<definition name="search" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/search.jsp"/>
    	</definition>
-   	
-   	<!-- 마이페이지 -->
-   	<definition name="mypage" extends="baseLayout">
-      	<put-attribute name="body" value="/WEB-INF/views/mypage.jsp"/>
-   	</definition>
-   	<!-- 회원삭제 -->
-   	<definition name="my_delete" extends="baseLayout">
-      	<put-attribute name="body" value="/WEB-INF/views/my_delete.jsp"/>
+   	<definition name="search_result" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/search_result.jsp"/>
    	</definition>
    	
+   	<!-- Test -->
+   	<definition name="test" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/test.jsp"/>
+   	</definition>
+   	
+   		<!-- 공지사항 -->
+	<definition name="Notice" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/notice.jsp"/>
+	</definition>
 </tiles-definitions>
