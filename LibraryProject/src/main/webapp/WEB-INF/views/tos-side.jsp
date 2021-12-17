@@ -16,7 +16,7 @@ font{
 	color: #000000;
 }
 </style>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title></title>
 </head>
 <body>

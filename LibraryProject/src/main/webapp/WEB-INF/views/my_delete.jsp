@@ -18,7 +18,6 @@
 
 <!-- Bootstrap core CSS -->
 <link href="./resources/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 <style>
 	.bd-placeholder-img {
 		font-size: 1.125rem;
@@ -51,11 +50,6 @@
 			return false;
 		}
 		
-		var sre = f.mem_rebook.value;
-		if(Number(sre)>=1){
-			alert("예약 중인 책이 있어 탈퇴 불가합니다.");
-		return false;
- 		}
 	 	alert("탈퇴가 완료되었습니다.");
 		f.submit();
 }
@@ -76,6 +70,7 @@
 <c:forEach items="${dellist }" var="mlist">
     			<div class="form-floating">
       				<input type="text" class="form-control" name="mem_id" placeholder="ID" readonly="readonly" value="${mlist.mem_id }">
+      				<input type="hidden" name="mem_no"value="${mlist.mem_no }">
       				<label for="floatingInput">ID</label>
     			</div>
     			<br>
@@ -84,10 +79,6 @@
 					<label for="floatingInput">Borrow Book</label>
     			</div>
     			<br>
-<%-- 				<div class="form-floating">
-      				<input type="text" class="form-control" name="mem_rebook" placeholder="mem_rebook" readonly="readonly" value="${mlist.mem_rebook }">
-				<label for="floatingInput">mem_rebook</label>
-    			</div> --%>
     			<button class="w-25 btn btn-lg btn-primary" type="submit" onclick="return check()">Leave</button>
     			<button class="w-25 btn btn-lg btn-primary" type="button" onclick="location.href='book'">Home</button>
 </c:forEach>
