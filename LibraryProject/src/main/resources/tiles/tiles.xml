@@ -64,4 +64,15 @@
       <definition name="my_delete" extends="baseLayout">
          <put-attribute name="body" value="/WEB-INF/views/my_delete.jsp"/>
       </definition>
+	
+		   	<!-- 이용안내 -->
+   	<definition name="information" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/information.jsp"/>
+   	</definition>
+   	
+   	   	<!-- 도서관 소개 -->
+   	<definition name="introduce" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/introduce.jsp"/>
+   	</definition>
+
 </tiles-definitions>
