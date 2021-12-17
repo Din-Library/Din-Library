@@ -22,8 +22,9 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
 
-					<li class="nav-item"><a class="nav-link" href="notice">이용 안내</a></li>
-					<li class="nav-item"><a class="nav-link" href="newbook">도서 검색</a></li>
+					<li class="nav-item"><a class="nav-link" href="introduce">도서관 소개</a></li>
+					<li class="nav-item"><a class="nav-link" href="information">이용 안내</a></li>
+
 					<c:choose>
                         <c:when test="${isLogOn == true && member != null }">
                         <li class="nav-item"><a class="nav-link" href="borrow_list?mem_no=${member.mem_no }">대출현황</a></li>
