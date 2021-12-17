@@ -27,15 +27,19 @@ font{
 		<tr>
 			<td><hr></td>
 		</tr>
-		<tr>
-			<td><a href="#"><font>이용 안내</font></a></td>
+				<tr>
+			<td><a href="introduce"><font>도서관 소개</font></a></td>
 		</tr>
 		<tr>
-			<td><a href="#"><font>공지사항</font></a></td>
+			<td><a href="information"><font>이용 안내</font></a></td>
+		</tr>
+		<tr>
+			<td><a href="notice"><font>공지사항</font></a></td>
 		</tr>
 		<tr>
 			<td><a href="map"><font>찾아오시는 길</font></a></td>
 		</tr>
 	</table>
+
 </body>
 </html>
