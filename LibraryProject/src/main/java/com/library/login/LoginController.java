@@ -41,13 +41,14 @@ public class LoginController {
 			session.setAttribute("isLogOn", true);
 			mv.setViewName("redirect:book");
 		}
-		else {
+		else { // 로그인 실패
 			rAttr.addAttribute("result", "loginFailed");
 			mv.setViewName("redirect:login");
 		}
 		return mv;
 	}
 	
+	// 로그아웃
 	@RequestMapping("/logout")
 	public ModelAndView logout(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session = request.getSession();

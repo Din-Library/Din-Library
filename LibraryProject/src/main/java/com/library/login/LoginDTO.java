@@ -1,6 +1,7 @@
 package com.library.login;
 
 public class LoginDTO {
+	int mem_no;
 	String mem_id, mem_pw, mem_name;
 
 	public LoginDTO() {
@@ -8,11 +9,20 @@ public class LoginDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public LoginDTO(String mem_id, String mem_pw, String mem_name) {
+	public LoginDTO(int mem_no, String mem_id, String mem_pw, String mem_name) {
 		super();
+		this.mem_no = mem_no;
 		this.mem_id = mem_id;
 		this.mem_pw = mem_pw;
 		this.mem_name = mem_name;
+	}
+	
+	public int getMem_no() {
+		return mem_no;
+	}
+
+	public void setMem_no(int mem_no) {
+		this.mem_no = mem_no;
 	}
 
 	public String getMem_id() {

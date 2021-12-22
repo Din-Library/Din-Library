@@ -18,6 +18,7 @@ public class TosController {
 		return "private";
 	}
 	
+	// 찾아오시는 길
 	@RequestMapping("/map")
 	   public String map() {
 	      return "map";

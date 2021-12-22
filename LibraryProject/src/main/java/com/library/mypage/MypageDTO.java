@@ -9,7 +9,7 @@ public class MypageDTO {
 	}
 
 	public MypageDTO(int mem_no, String mem_id, String mem_pw, String mem_name, String mem_birth, String mem_tel, String mem_email,
-			String mem_addr, String mem_bebook, String mem_rebook) {
+			String mem_addr, String mem_bebook) {
 		super();
 		this.mem_no = mem_no;
 		this.mem_id = mem_id;
@@ -20,7 +20,6 @@ public class MypageDTO {
 		this.mem_email = mem_email;
 		this.mem_addr = mem_addr;
 		this.mem_bebook = mem_bebook;
-		this.mem_rebook = mem_rebook;
 	}
 	
 	public int getMem_no() {
@@ -94,13 +93,6 @@ public class MypageDTO {
 	public void setMem_bebook(String mem_bebook) {
 		this.mem_bebook = mem_bebook;
 	}
-
-	public String getMem_rebook() {
-		return mem_rebook;
-	}
-
-	public void setMem_rebook(String mem_rebook) {
-		this.mem_rebook = mem_rebook;
-	}
 	
 }
+

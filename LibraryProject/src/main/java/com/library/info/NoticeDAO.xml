@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper">
+<mapper namespace="com.library.info.NoticeService">
+
+	<!-- 공지사항 글 작성 -->
+	<insert id="notice_input">
+		INSERT INTO NOTICE_TBL VALUES(NOTICE_NO_SEQ.nextval, #{param1}, #{param2}, #{param3}, 0, SYSDATE)
+	</insert>
+	
+	<!-- 공지사항 글 목록 -->
+	<select id="notice_list" resultType="com.library.info.NoticeDTO">
+		SELECT * FROM NOTICE_TBL ORDER BY NOTICE_NO DESC
+	</select>
+	
+	<!-- 공지사항 글 자세히 보기 -->
+	<select id="notice_detail" resultType="com.library.info.NoticeDTO">
+		SELECT * FROM NOTICE_TBL WHERE NOTICE_NO=#{param1}
+	</select>
+	
+	<!-- 공지사항 조회수 증가 -->
+	<update id="readcnt">
+		UPDATE NOTICE_TBL SET READCNT=READCNT+1 WHERE NOTICE_NO=#{param1}
+	</update>
+	
+	<!-- 공지사항 글 삭제 -->
+	<delete id="notice_delete">
+		DELETE FROM NOTICE_TBL WHERE NOTICE_NO=#{param1}
+	</delete>
+</mapper>

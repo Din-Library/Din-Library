@@ -75,6 +75,4 @@ public class BoListDTO {
 	public void setMem_no(int mem_no) {
 		this.mem_no = mem_no;
 	}
-	
 }
-

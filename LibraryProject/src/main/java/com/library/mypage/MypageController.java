@@ -3,7 +3,7 @@ package com.library.mypage;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
-
+import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,18 +21,6 @@ public class MypageController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-/*
-	@RequestMapping("/mypage")
-	public String Mypage(HttpServletRequest request, Model mo) {
-		String mem_name = request.getParameter("mem_name");
-		MypageService mypageService = sqlSession.getMapper(MypageService.class);
-		ArrayList<MypageDTO> pagelist = mypageService.mypage_act(mem_name);
-		mo.addAttribute("pagelist", pagelist);
-		return "mypage";
-	}
-	
-*/	
-	
 	@RequestMapping("/mypage")
 	public String Mypage(HttpServletRequest request, Model mo) {
 		int mem_no = Integer.parseInt(request.getParameter("mem_no"));
@@ -42,6 +30,7 @@ public class MypageController {
 		return "mypage";
 	}
 	
+	// 마이페이지 회원정보 수정
 	@RequestMapping(method = RequestMethod.POST, value = "/mymmodify")
 	public String Mypage_Modi(HttpServletRequest request, Model mo) {
 		String mem_id = request.getParameter("mem_id");
@@ -60,7 +49,8 @@ public class MypageController {
 		return "redirect:book";
 	}
 	
-	@RequestMapping("my_delete")
+	// 마이페이지 회원탈퇴를 위한 회원정보 조회
+	@RequestMapping("/my_delete")
 	public String mem_del(HttpServletRequest request, Model mo) {
 		String mem_id = request.getParameter("mem_id");
 		MypageService mypageService = sqlSession.getMapper(MypageService.class);
@@ -69,13 +59,17 @@ public class MypageController {
 		return "my_delete";
 	}
 
-	
+	//마이페이지 회원탈퇴 및 로그아웃
 	@RequestMapping(method = RequestMethod.POST, value = "/memdelete")
 	public String Mypage_delete(HttpServletRequest request) {
-		String mem_id = request.getParameter("mem_id");
-		MypageService mypageService = sqlSession.getMapper(MypageService.class);
-		mypageService.mypage_del(mem_id);
-		return "redirect:book";
+		  HttpSession session = request.getSession();
+	      String mem_id = request.getParameter("mem_id");
+	      MypageService mypageService = sqlSession.getMapper(MypageService.class);
+	      mypageService.mypage_del(mem_id);
+	      session.removeAttribute("member");
+	      session.removeAttribute("isLogOn");
+	      return "redirect:book";
+
 	}
 	
 }
