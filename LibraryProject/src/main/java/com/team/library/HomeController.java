@@ -94,6 +94,7 @@ public class HomeController {
 		}
 		return mv;
 	}
+	
 	private static String getTagValue(String tag, org.w3c.dom.Element eElement) {
 		org.w3c.dom.NodeList nList = eElement.getElementsByTagName(tag).item(0).getChildNodes();
 		
@@ -103,54 +104,6 @@ public class HomeController {
 		}
 		return nValue.getNodeValue();
 	}
-	
-	
-	/*
-	@RequestMapping("/book")
-	public ModelAndView book() {
-		StringBuffer result = new StringBuffer();
-		try {
-			StringBuilder urlBuilder = new StringBuilder("http://www.aladin.co.kr/ttb/api/test/ItemSearch.js");
-			urlBuilder.append("?" + URLEncoder.encode("ttbkey", "utf-8") + "=ttbwldbs3472110001");
-			urlBuilder.append("&" + URLEncoder.encode("Query", "utf-8") + "=aladdin");
-			urlBuilder.append("&" + URLEncoder.encode("QueryType", "utf-8") + "=Title");
-			URL url = new URL(urlBuilder.toString());
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-			conn.setRequestMethod("GET");
-			
-			BufferedReader rd;
-			if(conn.getResponseCode() >= 200 && conn.getResponseCode() <=300) {
-				rd = new BufferedReader(new InputStreamReader(conn.getInputStream(),"utf-8"));
-			}else {
-				rd = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
-			}
-			
-			String line;
-			while((line = rd.readLine()) != null) {
-				result.append(line + "\n");
-			}
-			
-			rd.close();
-			conn.disconnect();
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		ModelAndView mv = new ModelAndView();
-		mv.addObject("result", result);
-		mv.setViewName("index");
-		return mv;
-	}
-	*/
-	
-	
 }
 
 
