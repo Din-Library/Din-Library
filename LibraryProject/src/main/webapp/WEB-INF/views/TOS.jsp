@@ -6,7 +6,7 @@
 <style type="text/css">
 	#table1{
 		margin-left: 350px;
-		margin-top: 5px;
+		margin-top: 10px;
 		margin-right: 100px;
 	}
 	#table2{
@@ -38,9 +38,10 @@
 </style>
 <jsp:include page="tos-side.jsp"/>
 <meta charset="EUC-KR">
-<title>Din Lib</title>
+<title>Din Library</title>
 </head>
 <body>
+	<%-- 이용약관 --%>
 	<table id="table1">
 		<tr>
 			<td><div id="sub_navi"><a id="sub_navi" href="book">HOME</a> > 이용약관</div></td>

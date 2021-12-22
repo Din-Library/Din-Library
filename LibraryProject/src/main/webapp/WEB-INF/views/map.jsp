@@ -8,6 +8,8 @@
 		margin-left: 350px;
 		margin-top: 10px;
 		margin-right: 100px;
+		width: 35%;
+		display: block;
 	}
 	#table2{
 		border-collapse: collapse;
@@ -15,6 +17,8 @@
 		background-color: #F2F2F2;
 		margin-left: 350px;
 		margin-right: 150px;
+		width: 35%;
+		display: block;
 	}
 	#table3{
 		border-collapse: collapse;
@@ -23,6 +27,8 @@
 		margin-left: 350px;
 		margin-right: 150px;
 		margin-bottom: 250px;
+		width: 35%;
+		display: block;
 	}
 	#agree{
 		font-size: 15px;
@@ -52,9 +58,8 @@
 	margin-right: 200px;
 	margin-top: 10px;
 	background-color: #FAFAFA;
-	width:570px;
+	width: 20%;
 	height: 425px;
-
 	}
 	#map{
 		margin-left: 8.5px;
@@ -63,13 +68,14 @@
 <jsp:include page="tos-side.jsp"/>
 <%-- <jsp:include page="map-side.jsp"/> --%>
 <meta charset="UTF-8">
-<title>Din Lib</title>
+<title>Din Library</title>
 </head>
 <body>
+<%-- 찾아오시는 길 --%>
 <table align="right" id="map1">
 	<tr><td>
-	<div id="map" style="width:550px;height:400px;"/>
-	</tr></td>
+	<div id="map" style="width:550px;height:400px;"></div>
+	</td></tr>
 </table>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=15ba5d3a27484a9454fd70669306b887"></script>
 	<script>
@@ -82,17 +88,6 @@
 		var map = new kakao.maps.Map(container, options);
 </script>
 	<table id="table1">
-		<tr>
-			<td>
-				<div id="sub_navi">HOME > 찾아오시는 길</div>
-			</td>
-		</tr>
-		<tr>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-		</tr>
 		<tr>
 			<td>
 				<div id="sub_tit"><h2>찾아오시는 길</h2></div>

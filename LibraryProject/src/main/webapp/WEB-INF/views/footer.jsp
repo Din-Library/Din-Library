@@ -11,8 +11,8 @@
         <footer class="footer py-4">
             <div class="container">
                     <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyrightⓒ2021 by OOOO</div>
-                    <div class="col-lg-4 text-lg-start">수원시 팔달구 OO대로 123 OO빌딩 707호 031)254-7777</div>
+                    <div class="col-lg-4 text-lg-start">Copyrightⓒ2021 by Din-Library</div>
+                    <div class="col-lg-4 text-lg-start">경기 수원시 팔달구 덕영대로 899 <br> Developers by Kim.S.J Kim.J.Y Moon.J.W</div>
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-dark text-decoration-none me-3" href="TOS">이용약관</a> |&emsp; <a class="link-dark text-decoration-none me-3" href="private">개인정보처리방침</a>
                     </div>
@@ -20,9 +20,3 @@
             </div>
         </footer>
 </html> 
-
-
-
-
-            
- 

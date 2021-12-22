@@ -9,9 +9,7 @@
 <head>
 <link href="./resources/css/styles.css" rel="stylesheet" />
 <meta charset="UTF-8">
-        <title>이용안내</title>
-        
-
+<title>Din Lib</title>
 <style>
    .bd-placeholder-img {
       font-size: 1.125rem;
@@ -28,12 +26,11 @@
 		margin-top: 5px;
 		margin-right: 350px;
 	}
-
 </style>
 <jsp:include page="tos-side.jsp"/>
 </head>
-
-<table class="table" style="width:70%; margin-left: 300px; margin-right: 10%;" align="center">
+<%-- 이용안내 --%>
+<table class="table" style="width:70%; margin-left: 300px; margin-right: 10%; align:center">
 	<thead>
 	<br><br>
 	<tr><th colspan="5"><h3 class="mb-5 fw-bold" align="center">이용시간안내</h3></th></tr>

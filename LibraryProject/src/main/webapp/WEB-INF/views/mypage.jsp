@@ -18,6 +18,12 @@
 			f.mem_pw.select();
 			return false;
 		}
+//비밀번호 길이 제한 --------------------------------
+	    if(spw.length<2 || spw.length>20) {
+	       alert("패스워드의 길이는 20자 이내로 입력하세요.");
+	       f.mem_pw.select();
+	       return false;
+	    }
 		/*
 //비밀번호 영문+숫자조합--------------------------------		
 		var rpw = /^[a-z0-9]{6,15}$/; //>영어 소문자, 숫자 6~15자
@@ -69,13 +75,12 @@
 			f.mem_addr.select();
 			return false;
 		}
-		
-//주소 길이 제한 -------
-        if(!raddr.test(saddr)) {
-           alert("주소의 길이는 100자 이내로 입력하세요.");
-           f.mem_addr.select();
-           return false;
-        }
+//주소 길이 제한 ------------------------------
+	    if(saddr.length<2 || saddr.length>16) {
+	       alert("주소의 길이는 15자 이내로 입력하세요.");
+	       f.mem_addr.select();
+	       return false;
+	    }
 		
 		alert("수정이 완료되었습니다.");
 		f.submit();
@@ -83,7 +88,7 @@
 	
 </script>
 <meta charset="UTF-8">
-        <title>마이페이지</title>
+        <title>Din Library</title>
         <!-- Favicon-->
         
         <link rel="icon" type="image/x-icon" href="./resources/assets/favicon.ico" />
@@ -137,6 +142,7 @@
 
 </head>
 <body>
+	<%-- 마이페이지 --%>
    <section>
 	<main class="form-join">
            <form action="mymmodify" method="post" name="fmem">
@@ -187,16 +193,13 @@
                   <input type="hidden" class="form-control" name="mem_bebook" placeholder="mem_bebook" value="${plist.mem_bebook }">
              </div>
              
-			<div class="form-floating">
-                  <input type="hidden" class="form-control" name="mem_rebook" placeholder="mem_rebook" value="${plist.mem_rebook }">
-             </div>
+			
 
              <br>
      
              <div align="center">
-             <button class="w-25 btn btn-lg btn-primary" type="submit" onclick="return check()">Edit</button> 
-             <button class="btn btn-lg btn-primary" width="43px" type="button" onclick="location.href='borrow_list?mem_id=${plist.mem_id }">Borrow list</button>
-             <button class="w-25 btn btn-lg btn-primary" type="button" onclick="location.href='mem_delete?mem_id=${plist.mem_id }'">Leave</button>
+             <button class="w-25 btn btn-lg btn-primary" type="submit" onclick="return check()">Edit</button>
+             <button class="w-25 btn btn-lg btn-primary" type="button" onclick="location.href='my_delete?mem_id=${plist.mem_id }'">Leave</button>
              </div>
              </c:forEach>
           </form>

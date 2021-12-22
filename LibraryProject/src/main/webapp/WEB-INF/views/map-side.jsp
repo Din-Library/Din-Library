@@ -17,13 +17,12 @@
 		color: #000000;
 	}
 	#map1{
-	margin-right: 200px;
+	align: right;
 	margin-top: 10px;
+	margin-right: 200px;
 	background-color: #FAFAFA;
-	width:570px;
-	height: 425px;
-
 	}
+	
 	#map{
 		margin-left: 8.5px;
 	}
@@ -34,11 +33,14 @@
 <title></title>
 </head>
 <body>
-<table align="right" id="map1">
-	<tr><td>
-	<div id="map" style="width:550px;height:400px;"/>
-	</tr></td>
-</table>
+<%-- 지도 --%>
+<table id="map1">
+	<tr>
+		<td>
+			<div id="map"></div>
+		</td>
+	</tr>
+</table >
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=15ba5d3a27484a9454fd70669306b887"></script>
 	<script>
 		var container = document.getElementById('map');

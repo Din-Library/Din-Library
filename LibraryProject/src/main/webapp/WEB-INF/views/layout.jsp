@@ -5,7 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Din Lib</title>
+<title>Din Library</title>
+<link href="./resources/css/styles.css" rel="stylesheet" />
 <style type="text/css">
 	#container{
 		width: 100%;  
@@ -29,7 +30,6 @@
 </head>
 <body>
 	<div id="container">
-		
 		<div id="nav">
 			<tiles:insertAttribute name="nav" />
 		</div>

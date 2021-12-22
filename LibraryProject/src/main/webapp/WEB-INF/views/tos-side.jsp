@@ -16,7 +16,7 @@ font{
 	color: #000000;
 }
 </style>
-<meta charset="utf-8">
+<meta charset="EUC-KR">
 <title></title>
 </head>
 <body>
@@ -27,7 +27,7 @@ font{
 		<tr>
 			<td><hr></td>
 		</tr>
-				<tr>
+		<tr>
 			<td><a href="introduce"><font>도서관 소개</font></a></td>
 		</tr>
 		<tr>
@@ -40,6 +40,5 @@ font{
 			<td><a href="map"><font>찾아오시는 길</font></a></td>
 		</tr>
 	</table>
-
 </body>
 </html>

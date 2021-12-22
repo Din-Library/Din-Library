@@ -4,10 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Core theme CSS (includes Bootstrap)-->
-	<link href="./resources/css/styles.css" rel="stylesheet" />
 <meta charset="UTF-8">
-<title>Din Lib</title>
+<title>Din Library</title>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -17,14 +15,11 @@
 				Menu
 				<i class="fas fa-bars ms-1"></i>
 			</button>
-	
-			
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-
 					<li class="nav-item"><a class="nav-link" href="introduce">도서관 소개</a></li>
 					<li class="nav-item"><a class="nav-link" href="information">이용 안내</a></li>
-
+					<li class="nav-item"><a class="nav-link" href="newbook">도서 검색</a></li>
 					<c:choose>
                         <c:when test="${isLogOn == true && member != null }">
                         <li class="nav-item"><a class="nav-link" href="borrow_list?mem_no=${member.mem_no }">대출현황</a></li>
@@ -35,8 +30,7 @@
 			</div>
 		</div>
 	</nav>
-
-   <!-- Bootstrap core JS-->
+	    <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="./resources/js/scripts.js"></script>
