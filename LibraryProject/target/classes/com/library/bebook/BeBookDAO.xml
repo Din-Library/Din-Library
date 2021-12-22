@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper">
+<mapper namespace="com.library.bebook.BeBookService">
+	
+	<!-- 도서 대출 -->
+	<insert id="book_insert">
+		INSERT INTO BOOK_TBL VALUES(#{param1}, #{param2}, #{param3}, #{param4}, sysdate, sysdate+14, '대출중')
+	</insert>
+	
+	<!-- 도서확인 -->
+	<select id="book_check" resultType="com.library.bebook.BeBookDTO">
+		SELECT BOOK_ISBN FROM BOOK_TBL WHERE BOOK_ISBN=#{param1}
+	</select>
+	
+	<!-- 대출권수 조회 -->
+	<select id="book_full" resultType="Integer">
+		SELECT COUNT(#{param1}) FROM BOOK_TBL WHERE MEM_NO=#{param1}
+	</select>
+	
+	<!-- 대출시 대출권수 증가 -->
+	<update id="bebook_update">
+		UPDATE MEMBER SET MEM_BEBOOK = MEM_BEBOOK+1 WHERE MEM_NO=#{param1}
+	</update>
+	
+	<!-- 도서반납 -->
+	<delete id="book_checkin">
+		DELETE FROM BOOK_TBL WHERE BOOK_ISBN=#{param1} AND MEM_NO=#{param2}
+	</delete>
+	
+	<!-- 반납시 대출권수 감소 -->
+	<update id="member_checkin">
+		UPDATE MEMBER SET MEM_BEBOOK = MEM_BEBOOK-1 WHERE MEM_NO=#{param1}
+	</update>
+</mapper>
+    

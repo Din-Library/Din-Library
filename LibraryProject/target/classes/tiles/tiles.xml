@@ -10,11 +10,12 @@
 		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
 	</definition>
 	
+	<!-- 메인화면 -->
 	<definition name="index" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/views/index.jsp"/>
 	</definition>
 	
-	<!-- login -->
+	<!-- 로그인 -->
 	<definition name="login" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/views/login.jsp"/>
 	</definition>
@@ -24,11 +25,12 @@
       	<put-attribute name="body" value="/WEB-INF/views/join.jsp"/>
    	</definition>
    	
-	<!-- 이용약관 / 개인정보처리방침 -->
+	<!-- 이용약관 -->
 	<definition name="TOS" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/TOS.jsp"/>
     </definition>
-
+	
+	<!-- 개인정보처리방침 -->
    	<definition name="private" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/private.jsp"/>
    	</definition>
@@ -36,10 +38,59 @@
    	<!-- 찾아오시는 길 -->
    	<definition name="map" extends="baseLayout">
       <put-attribute name="body" value="/WEB-INF/views/map.jsp"/>
-   </definition>
-   
+   	</definition>
+   	
+   	<!-- 공지사항 -->
+	<definition name="notice" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/notice.jsp"/>
+	</definition>
+	
+	<!-- 공지사항 글작성 -->
+	<definition name="notice_write" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/notice_write.jsp"/>
+	</definition>
+	
+	<!-- 공지사항 자세히 보기 -->
+	<definition name="notice_detail" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/notice_detail.jsp"/>
+	</definition>
+	
+	<!-- 이용안내 -->
+   	<definition name="information" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/information.jsp"/>
+   	</definition>
+   	
+	<!-- 도서관 소개 -->
+   	<definition name="introduce" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/introduce.jsp"/>
+   	</definition>
+   	
    	<!-- 도서 검색 -->
    	<definition name="search" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/search.jsp"/>
    	</definition>
+   	<definition name="search_result" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/search_result.jsp"/>
+   	</definition>
+   	
+   	<!-- 도서 대출 -->
+   	<definition name="bebook_check" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/bebook_check.jsp"/>
+   	</definition>
+   	
+   	<!-- 마이페이지 -->
+	<definition name="mypage" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/mypage.jsp"/>
+	</definition>
+	
+	<!-- 회원삭제 -->
+	<definition name="my_delete" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/my_delete.jsp"/>
+	</definition>
+	
+	<!-- 대출리스트 -->
+  	<definition name="borrow_list" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/borrow_list.jsp"/>
+	</definition>
+ 
 </tiles-definitions>

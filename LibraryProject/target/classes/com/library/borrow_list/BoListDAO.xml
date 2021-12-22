@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.borrow_list.BoListService">
+	
+	<!-- 대출현황 -->
+	<select id="bo_list" resultType="com.library.borrow_list.BoListDTO">
+		 SELECT B.MEM_NO, B.MEM_ID, B.BOOK_ISBN, B.BOOK_TITLE, B.BE_DATE, B.BE_RETURN, B.BE_STATUS FROM MEMBER M, BOOK_TBL B WHERE M.MEM_NO = B.MEM_NO AND M.MEM_NO=#{param1} ORDER BY B.BE_RETURN ASC
+	</select> 
+
+</mapper>
