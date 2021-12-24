@@ -11,6 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
 
 @Controller
 public class InfoController {
@@ -30,6 +32,7 @@ public class InfoController {
 	}
 	
 	// 공지사항
+	/*
 	@RequestMapping("/notice")
 	public String notice(Model model) {
 		NoticeService noticeService = sqlSession.getMapper(NoticeService.class);
@@ -37,6 +40,7 @@ public class InfoController {
 		model.addAttribute("nlist", alist);
 		return "notice";
 	}
+	*/
 	
 	// 공지사항 글작성
 	@RequestMapping("/notice_write")
@@ -79,6 +83,29 @@ public class InfoController {
 		NoticeService noticeService = sqlSession.getMapper(NoticeService.class);
 		noticeService.notice_delete(notice_no);
 		return "redirect:notice";
+	}
+	
+	//공지사항 페이징
+	@RequestMapping("/notice")
+	public String noticeList(PagingVO vo, Model model
+			, @RequestParam(value="nowPage", required=false)String nowPage
+			, @RequestParam(value="cntPerPage", required=false)String cntPerPage) {
+		
+		NoticeService noticeService = sqlSession.getMapper(NoticeService.class);
+		int total = noticeService.cntNotice();
+		if (nowPage == null && cntPerPage == null) {
+			nowPage = "1";
+			cntPerPage = "5";
+		} else if (nowPage == null) {
+			nowPage = "1";
+		} else if (cntPerPage == null) { 
+			cntPerPage = "5";
+		}
+		vo = new PagingVO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
+		model.addAttribute("paging", vo);
+		model.addAttribute("viewAll", noticeService.selectNotice(vo));
+		
+		return "noticepaging";
 	}
 }
 

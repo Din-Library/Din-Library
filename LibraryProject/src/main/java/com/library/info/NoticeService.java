@@ -18,4 +18,10 @@ public interface NoticeService {
 	
 	// 공지사항 글 삭제
 	public void notice_delete(int notice_no);
+	
+	// 게시물 총 갯수
+	public int cntNotice();
+
+	// 페이징 처리 게시글 조회
+	public ArrayList<NoticeDTO> selectNotice(PagingVO vo);
 }
