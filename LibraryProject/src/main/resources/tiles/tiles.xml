@@ -45,6 +45,11 @@
 		<put-attribute name="body" value="/WEB-INF/views/notice.jsp"/>
 	</definition>
 	
+	<!-- 공지사항 페이징-->
+	<definition name="noticepaging" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/noticepaging.jsp"/>
+	</definition>
+	
 	<!-- 공지사항 글작성 -->
 	<definition name="notice_write" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/views/notice_write.jsp"/>
