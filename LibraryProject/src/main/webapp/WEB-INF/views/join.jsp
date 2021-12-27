@@ -158,7 +158,7 @@
 	}
 </script>
 </head>
-<body class="text-center">
+<body class="text-center" style="overflow-x: visible; width:1903px; overflow-y:scroll;">
 	<%-- 회원가입 --%>
 	<section>
 		<main class="form-join">
@@ -167,11 +167,11 @@
              	<h1 class="h3 mb-3 fw-normal">JOIN</h1>
 
 				<div class="form-floating">
-	             	<input type="text" class="form-control" id="mem_id" name="mem_id" placeholder="ID">
+				<button class="idChk btn btn-lg btn-primary" type="button" id="idChk" onclick="fn_idChk();" style="width: 100px; font-size: 15px; float: right; height: 3.8em" value="N">중복확인</button>
+	             	<input type="text" class="form-control" id="mem_id" name="mem_id" placeholder="ID" style="width:77%;">
 	             	<label for="floatingInput">ID</label>
-	             	<button class="idChk" type="button" id="idChk" onclick="fn_idChk();" value="N">중복확인</button>
-				</div>
-				<br>
+	            </div>
+	            <br>
 				<div class="form-floating">
 					<input type="password" class="form-control" name="mem_pw" placeholder="Password">
 					<label for="floatingPassword">Password</label>
