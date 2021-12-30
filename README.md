@@ -1,8 +1,7 @@
 # Din-Library
 Java, Spring, Oracle, Mybatis, Mysql, Bootstrap, Open API
-
-### 도서관 프로젝트
 #### Developers by. 김수진 김지윤 문정우
+
 
 ■ 도서관에서 사용하는 대출/반납 시스템을 웹 프로젝트로 구현
 
@@ -16,10 +15,10 @@ Java, Spring, Oracle, Mybatis, Mysql, Bootstrap, Open API
 8. [Din Library Project.pdf](https://github.com/Din-Library/Din-Library/blob/main/Din%20Libaray%20Project.pdf)
 
 ■ 구현한 Spring 프로젝트를 cafe24에 호스팅
-http://dinlib.cafe24.com/book
 
-1. 메인 화면 주소 변경 ("/book" -> "/")
-2. cafe24에 호스팅하기 위해 Oracle DB를 MySQL로 변경 
+1. http://dinlib.cafe24.com
+2. 메인 화면 주소 변경 ("/book" -> "/")
+3. cafe24에 호스팅하기 위해 Oracle DB를 MySQL로 변경 
 
 
 
